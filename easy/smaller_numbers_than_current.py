@@ -27,4 +27,7 @@ def smaller_numbers_than_current(nums: List[int]) -> List[int]:
 
 if __name__ == '__main__':
     li = [7, 7, 7, 7, 7]
+    # expected result [0, 0, 0, 0, 0]
+    # li_two = [8,1,2,2,3], expected = [4,0,1,1,3]
+
     print(smaller_numbers_than_current(li))
