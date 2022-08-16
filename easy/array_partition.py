@@ -6,13 +6,10 @@ from typing import List
 
 
 def array_pair_sum(nums: List[int]) -> int:
-    sorted_nums = sorted(nums)
+    nums.sort()
     maxim_sum = 0
-
-    for i in range(len(sorted_nums) // 2):
-        maxim_sum += sorted_nums[0]
-        sorted_nums.pop(0)
-        sorted_nums.pop(0)
+    for i in range(0, len(nums), 2):
+        maxim_sum += nums[i]
     return maxim_sum
 
 
