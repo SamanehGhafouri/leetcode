@@ -12,7 +12,14 @@ def sort_array_by_parity(nums: List[int]) -> List[int]:
     return evens + odds
 
 
+def sort_faster_solution(nums: List[int]) -> List[int]:
+    evens = list(filter(lambda x: x % 2 == 0, nums))
+    odds = list(filter(lambda x: x % 2 != 0, nums))
+    return evens + odds
+
+
 if __name__ == '__main__':
     li = [3, 1, 2, 4]
     li_2 = [1, 0, 3]
     print(sort_array_by_parity(li_2))
+    print(sort_faster_solution(li))
