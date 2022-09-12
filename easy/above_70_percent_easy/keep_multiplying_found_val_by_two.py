@@ -10,7 +10,7 @@ Repeat this process with the new number as long as you keep finding the number.
 Return the final value of original.
 """
 from typing import List
-from easy.Algorithms.binary_search import BinarySearch
+from easy.above_70_percent_easy.Algorithms.binary_search import BinarySearch
 
 
 def find_final_value(nums: List[int], original: int) -> int:
