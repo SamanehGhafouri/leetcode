@@ -12,9 +12,7 @@ from typing import List
 def self_dividing_numbers(left: int, right: int) -> List[int]:
     list_dividing_num = []
     for num in range(left, right + 1):
-        if "0" in str(num):
-            continue
-        else:
+        if "0" not in str(num):
             count = 0
             for n in str(num):
                 if num % int(n) == 0:
