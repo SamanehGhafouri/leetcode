@@ -17,14 +17,15 @@ def find_max_k(nums: List[int]) -> int:
             set_negative.add(num)
     if len(set_positive) == 0 or len(set_negative) == 0:
         return - 1
+    sorted_positives = sorted(set_positive)
     for num in range(len(set_positive)):
-        max_num = max(set_positive)
+        max_num = sorted_positives[-1]
         negative_num = -abs(max_num)
         if negative_num in set_negative:
             return max_num
         else:
-            set_positive.remove(max_num)
-        if len(set_positive) == 0:
+            sorted_positives.pop()
+        if len(sorted_positives) == 0:
             return -1
     return max_num
 
